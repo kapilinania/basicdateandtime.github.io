@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .main{
+            background-image: url(1.jpg);
+            background-size: cover;
+            width: 100%;
+            height: 750px;
+            position: relative;
+        }
+        .kapil{
+            position:  absolute;
+            top: 30%;
+            left: 30%;
+            font-size: 50px;
+            color: white;
+            border: 5px dotted rgb(20, 247, 228);
+            padding: 10px;
+        }
+        .user{
+            color:black;
+            position: absolute;
+            top: 20%;
+            left: 30%;
+            font-size: 55px;    
+
+        }
+        .jodh{
+            position:  absolute;
+            top: 30%;
+            left: 50%;
+            font-size: 50px;
+            color: red;
+            border: 5px dotted rgb(20, 247, 228);
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="main">  
+            <div class="user">Today Date and Timeimg Is</div>
+            <div class="kapil" id="kali"></div>
+            <div class="jodh" id="jodhpur"></div>
+        </div>
+        
+    </header>
+    <script>
+        let date = new Date();
+        let a = date.getDate();
+        let b = date.getMonth()+1;
+        let c = date.getFullYear();
+        let kapil = `${a}-${b}-${c}`;
+        document.getElementById("kali").innerHTML = kapil;
+
+        let jodh = date.getHours();
+        let nagaur = date.getMinutes();
+        let merta = date.getSeconds();
+        let jodh1 =  `${jodh} : ${nagaur} : ${merta}`;
+        document.getElementById("jodhpur").innerHTML = jodh1;
+    </script>
+</body>
+</html>
